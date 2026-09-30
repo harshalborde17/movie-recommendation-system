@@ -17,7 +17,7 @@ Website -> Scraper -> Clean data -> SQLite -> FastAPI -> Frontend
 
 ## Project structure
 
-movie_scraper_internship/
+movie_scraper/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py
