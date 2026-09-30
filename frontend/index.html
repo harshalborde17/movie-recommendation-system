@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="hero">
+    <div>
+        <p class="eyebrow">WORLD OF MOVIES</p>
+        <h1>🎬 Movie Explorer</h1>
+        <p>Scraped movie data • SQLite • FastAPI • Search & Filters</p>
+    </div>
+    <a class="docs" href="/docs" target="_blank">API Docs ↗</a>
+</header>
+
+<main class="container">
+    <section class="stats" id="stats"></section>
+
+    <section class="controls">
+        <input id="search" type="search" placeholder="Search title, director, cast...">
+        <select id="genre">
+            <option value="">All genres</option>
+        </select>
+        <input id="year" type="number" placeholder="Year">
+        <input id="minRating" type="number" min="0" max="10" step="0.1" placeholder="Min rating">
+        <select id="sort">
+            <option value="title_asc">Title A-Z</option>
+            <option value="title_desc">Title Z-A</option>
+            <option value="rating_desc">Rating high-low</option>
+            <option value="rating_asc">Rating low-high</option>
+            <option value="year_desc">Newest</option>
+            <option value="year_asc">Oldest</option>
+        </select>
+        <button id="searchBtn">Search</button>
+        <button id="resetBtn" class="secondary">Reset</button>
+    </section>
+
+    <div class="toolbar">
+        <span id="resultText">Loading...</span>
+        <a href="/api/export/csv">Export CSV</a>
+    </div>
+
+    <section id="movieGrid" class="grid"></section>
+
+    <div class="pagination">
+        <button id="prevBtn">← Previous</button>
+        <span id="pageText">Page 1</span>
+        <button id="nextBtn">Next →</button>
+    </div>
+</main>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-card">
+        <button id="closeModal" class="close">×</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>
