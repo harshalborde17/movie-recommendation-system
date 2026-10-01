@@ -56,23 +56,21 @@ movie_scraper/
 │   ├── routes.py
 │   ├── scraper.py
 │   └── seed.py
-
 │
 ├── data/
 │   └── sample_movies.json
-
 │
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
-
 │
 ├── .env.example
 ├── .gitignore
 ├── MUST_READ.txt
 ├── README.md
 └── requirements.txt
+
 
 
 
